@@ -6,12 +6,12 @@
   (if (null pl)
       nil
     (let ((results nil)
-	  (cursor p1))
+	  (cursor pl))
       (while (not (null cursor))
 	(setq results (cons (cons (car cursor) (cadr cursor))
 			    results))
 	(setq cursor (cddr cursor)))
-      (nrevese results))))
+      (nreverse results))))
 
 (defun assoak-alist-to-plist (ass)
   "Converts the association list ASS to a property list."
